@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI Calculator | Aashiyana Realty</title>
+    <meta
+      name="description"
+      content="Home loan EMI calculator - check your monthly EMI, total interest and total payment in seconds."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+
+        <nav class="menu" id="menu">
+          <a href="index.html">Home</a>
+          <a href="properties.html">Properties</a>
+          <a href="sell.html">Sell</a>
+          <a href="index.html#areas">Areas</a>
+          <a href="index.html#services">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="icon-btn" id="themeBtn" aria-label="Dark mode">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a href="tel:+918104591780" class="btn btn-coral">Call Now</a>
+          <button class="icon-btn burger" id="burger" aria-label="Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>EMI Calculator</h1>
+        <p class="breadcrumb">
+          <a href="index.html">Home</a> &nbsp;/&nbsp; EMI Calculator
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CALCULATOR ================= -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Home Loan EMI Calculator</h2>
+          <p>Check your monthly EMI in seconds.</p>
+        </div>
+
+        <!-- Calculator emi.js banati hai (emi-page.js se) -->
+        <div id="emiPage"></div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Need help getting a home loan?</h2>
+          <p>Talk to us today, we will show you the best options for your needs.</p>
+          <a href="contact.html" class="btn btn-coral">Get in Touch</a>
+          <a href="properties.html" class="btn btn-light">View Properties</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+            <p style="margin-top: 14px">
+              Your trusted property partner in Mumbai, Thane, and Navi Mumbai.
+            </p>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="sell.html">Sell Your Property</a></li>
+              <li><a href="emi.html">EMI Calculator</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas</h4>
+            <ul>
+              <li><a href="properties.html?area=Andheri">Andheri</a></li>
+              <li><a href="properties.html?area=Bandra">Bandra</a></li>
+              <li><a href="properties.html?area=Powai">Powai</a></li>
+              <li><a href="properties.html?area=Thane">Thane</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><i class="bi bi-geo-alt"></i> Andheri West, Mumbai 400053</li>
+              <li><i class="bi bi-telephone"></i> +91 81045 91780</li>
+              <li><i class="bi bi-envelope"></i> info@aashiyanarealty.in</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">
+          &copy; <span id="year"></span> Aashiyana Realty. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/918104591780?text=Hi%2C%20I%20need%20help%20with%20a%20home%20loan"
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/emi.js"></script>
+    <script src="js/emi-page.js"></script>
+  </body>
+</html>

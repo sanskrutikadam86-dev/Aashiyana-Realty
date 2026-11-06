@@ -1,0 +1,18 @@
+# Private database credentials
+config/db.php
+
+# Local environment files
+.env
+.env.*
+
+# Private uploads and storage
+storage/*
+!storage/.gitkeep
+
+# Editor and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

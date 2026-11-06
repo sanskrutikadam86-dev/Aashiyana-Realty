@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell or Rent Your Property | Aashiyana Realty</title>
+    <meta
+      name="description"
+      content="Want to sell or rent your flat, house or shop in Mumbai? List your property with Aashiyana Realty for free."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+
+        <nav class="menu" id="menu">
+          <a href="index.html">Home</a>
+          <a href="properties.html">Properties</a>
+          <a href="sell.html" class="active">Sell</a>
+          <a href="emi.html">EMI Calculator</a>
+          <a href="index.html#areas">Areas</a>
+          <a href="index.html#services">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="icon-btn" id="themeBtn" aria-label="Dark mode">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a href="tel:+918104591780" class="btn btn-coral">Call Now</a>
+          <button class="icon-btn burger" id="burger" aria-label="Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Sell or Rent Your Property</h1>
+        <p class="breadcrumb">
+          <a href="index.html">Home</a> &nbsp;/&nbsp; Sell Your Property
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="sell-steps-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">How it works</span>
+          <h2>List your property in 3 easy steps</h2>
+          <p>No fees to list. We handle the buyers, you stay in control.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <h3>Share your details</h3>
+            <p>Fill the form below with your property details and a few photos.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">2</div>
+            <h3>We call you</h3>
+            <p>Our team verifies the details and discusses the right price with you.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">3</div>
+            <h3>We find buyers</h3>
+            <p>Your property goes live on our website and we bring genuine buyers or tenants.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FORM ================= -->
+    <section class="sell-form-section">
+      <div class="container sell-grid">
+        <!-- Left: benefits -->
+        <div class="sell-info reveal">
+          <span class="tag">Why list with us</span>
+          <h2>Get the right price, without the headache</h2>
+          <ul class="benefits">
+            <li><i class="bi bi-check-circle-fill"></i> Free listing, no hidden charges</li>
+            <li><i class="bi bi-check-circle-fill"></i> Genuine buyers and tenants only</li>
+            <li><i class="bi bi-check-circle-fill"></i> Local experts who know your area</li>
+            <li><i class="bi bi-check-circle-fill"></i> Help with agreement and paperwork</li>
+          </ul>
+          <div class="sell-call">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <span>Prefer to talk? Call us</span>
+              <a href="tel:+918104591780">+91 81045 91780</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form card -->
+        <div class="sell-card reveal" id="sellCard">
+          <h3>Tell us about your property</h3>
+
+          <form id="sellForm" novalidate>
+            <!-- Spam jaal: insaan ko ye dikhta nahi, bots bhar dete hain -->
+            <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" />
+
+            <!-- Sell ya Rent -->
+            <div class="seg">
+              <label><input type="radio" name="listing_type" value="sell" checked /><span>I want to Sell</span></label>
+              <label><input type="radio" name="listing_type" value="rent" /><span>I want to Rent out</span></label>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="ownerName">Your Name</label>
+                <input type="text" id="ownerName" name="owner_name" maxlength="100" />
+              </div>
+              <div class="field">
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone" name="phone" maxlength="10" inputmode="numeric" placeholder="10 digits" />
+              </div>
+              <div class="field full">
+                <label for="email">Email <span class="opt">(optional)</span></label>
+                <input type="email" id="email" name="email" maxlength="120" />
+              </div>
+
+              <div class="field">
+                <label for="propType">Property type</label>
+                <select id="propType" name="property_type">
+                  <option value="flat">Flat / Apartment</option>
+                  <option value="house">Independent House / Villa</option>
+                  <option value="plot">Plot / Land</option>
+                  <option value="commercial">Office / Shop</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="area">Area</label>
+                <select id="area" name="area">
+                  <option>Andheri</option>
+                  <option>Bandra</option>
+                  <option>Powai</option>
+                  <option>Goregaon</option>
+                  <option>Borivali</option>
+                  <option>Mulund</option>
+                  <option>Worli</option>
+                  <option>Lower Parel</option>
+                  <option>Thane</option>
+                  <option>Navi Mumbai</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="address">Address / Landmark <span class="opt">(optional)</span></label>
+                <input type="text" id="address" name="address" maxlength="200" placeholder="e.g. Near Lokhandwala Market" />
+              </div>
+
+              <div class="field res-only">
+                <label for="bhk">BHK</label>
+                <select id="bhk" name="bhk">
+                  <option value="1">1 BHK</option>
+                  <option value="2" selected>2 BHK</option>
+                  <option value="3">3 BHK</option>
+                  <option value="4">4 BHK</option>
+                  <option value="5">5+ BHK</option>
+                </select>
+              </div>
+              <div class="field res-only">
+                <label for="bathrooms">Bathrooms</label>
+                <input type="number" id="bathrooms" name="bathrooms" min="0" max="10" value="2" />
+              </div>
+
+              <div class="field">
+                <label for="sqft">Area (sq.ft)</label>
+                <input type="number" id="sqft" name="sqft" min="1" />
+              </div>
+              <div class="field">
+                <label for="price" id="priceLabel">Expected price (&#8377;)</label>
+                <input type="text" id="price" name="expected_price" inputmode="numeric" placeholder="e.g. 9500000" />
+                <div class="hint" id="priceHint"></div>
+              </div>
+
+              <div class="field full">
+                <label for="description">Description <span class="opt">(optional)</span></label>
+                <textarea id="description" name="description" rows="3" maxlength="1500"
+                          placeholder="Floor, age of building, parking, furnishing, anything buyers should know"></textarea>
+              </div>
+
+              <div class="field full">
+                <label for="photos">Photos <span class="opt">(optional, up to 3, each under 2 MB)</span></label>
+                <input type="file" id="photos" name="photos[]" accept="image/jpeg,image/png,image/webp" multiple />
+                <div class="previews" id="previews"></div>
+              </div>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consent" id="consent" value="1" />
+              I agree that Aashiyana Realty can contact me about this property.
+            </label>
+
+            <button type="submit" class="btn btn-coral" id="sellBtn">Submit Property</button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+            <p style="margin-top: 14px">
+              Your trusted property partner in Mumbai, Thane, and Navi Mumbai.
+            </p>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="sell.html">Sell Your Property</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas</h4>
+            <ul>
+              <li><a href="properties.html?area=Andheri">Andheri</a></li>
+              <li><a href="properties.html?area=Bandra">Bandra</a></li>
+              <li><a href="properties.html?area=Powai">Powai</a></li>
+              <li><a href="properties.html?area=Thane">Thane</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><i class="bi bi-geo-alt"></i> Andheri West, Mumbai 400053</li>
+              <li><i class="bi bi-telephone"></i> +91 81045 91780</li>
+              <li><i class="bi bi-envelope"></i> info@aashiyanarealty.in</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">
+          &copy; <span id="year"></span> Aashiyana Realty. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/918104591780?text=Hi%2C%20I%20want%20to%20sell%20my%20property"
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/sell.js"></script>
+  </body>
+</html>

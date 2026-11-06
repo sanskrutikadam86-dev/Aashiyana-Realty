@@ -1,0 +1,747 @@
+/* =========================================================
+   admin.css - Admin panel ka design (login + dashboard)
+   Colors website jaise hi: Teal & Coral
+   ========================================================= */
+
+:root {
+  --teal: #0e7c7b;
+  --teal-dark: #0a5959;
+  --coral: #ff6b57;
+  --coral-dark: #e9523d;
+  --bg: #f1f6f6;
+  --text: #1c2b2b;
+  --muted: #5f7373;
+  --border: #dbe7e7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--coral);
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.25s, transform 0.25s;
+}
+.btn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+}
+.btn-small {
+  display: inline-block;
+  width: auto;
+  padding: 8px 18px;
+  font-size: 14px;
+}
+
+/* ---------- Login page ---------- */
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(120deg, var(--teal-dark), var(--teal));
+}
+.login-card {
+  width: min(400px, 100%);
+  background: #fff;
+  padding: 40px 36px;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+.brand {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+.brand span {
+  color: var(--coral);
+}
+.login-card h1 {
+  font-size: 24px;
+  margin-top: 18px;
+}
+.login-card .sub {
+  color: var(--muted);
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+.login-card label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 14px 0 6px;
+}
+.login-card input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  background: var(--bg);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.login-card input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(14, 124, 123, 0.18);
+}
+.login-card .btn {
+  margin-top: 22px;
+}
+.login-card .back {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.login-card .back:hover {
+  color: var(--coral);
+}
+
+/* Error / success message box */
+.alert {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.alert.error {
+  background: rgba(255, 107, 87, 0.13);
+  color: var(--coral-dark);
+}
+
+/* ---------- Admin pages (dashboard etc.) ---------- */
+.admin-page {
+  background: var(--bg);
+  min-height: 100vh;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+}
+.topbar .brand small {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+}
+.content {
+  max-width: 1100px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+.card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(10, 89, 89, 0.08);
+}
+.card h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+.muted {
+  color: var(--muted);
+  margin-top: 8px;
+}
+/* =========================================================
+   ADMIN ADDITIONS (dashboard, tables, navigation)
+   Is poore code ko admin.css ke SABSE NEECHE paste karo.
+   ========================================================= */
+
+/* ---------- Topbar ke links ---------- */
+.topbar .link {
+  color: var(--teal);
+  font-weight: 500;
+  font-size: 14px;
+}
+.topbar .link:hover {
+  color: var(--coral);
+}
+
+/* ---------- Navigation tabs ---------- */
+.admin-nav {
+  display: flex;
+  gap: 4px;
+  padding: 0 32px;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+.admin-nav a {
+  padding: 14px 22px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--muted);
+  border-bottom: 3px solid transparent;
+  transition: color 0.25s, border-color 0.25s;
+}
+.admin-nav a:hover {
+  color: var(--teal);
+}
+.admin-nav a.active {
+  color: var(--teal);
+  border-bottom-color: var(--coral);
+}
+
+/* ---------- Page heading ---------- */
+.page-title {
+  font-size: 28px;
+  margin-bottom: 22px;
+}
+.section-title {
+  font-size: 19px;
+  margin-bottom: 14px;
+}
+.card {
+  margin-bottom: 26px;
+}
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.card-head .section-title {
+  margin-bottom: 0;
+}
+.card .link {
+  color: var(--teal);
+  font-weight: 500;
+  font-size: 14px;
+}
+.card .link:hover {
+  color: var(--coral);
+}
+
+/* ---------- Stat cards ---------- */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 26px;
+}
+.stat-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(10, 89, 89, 0.08);
+  border-left: 5px solid var(--teal);
+  transition: transform 0.3s;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+.stat-card .label {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+}
+.stat-card .num {
+  display: block;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  line-height: 1.2;
+}
+.stat-card.highlight {
+  border-left-color: var(--coral);
+}
+.stat-card.highlight .num {
+  color: var(--coral);
+}
+
+/* ---------- Pills ---------- */
+.pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.pill {
+  background: var(--bg);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 15px;
+}
+.pill strong {
+  color: var(--teal);
+  margin-left: 6px;
+}
+
+/* ---------- Table ---------- */
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  text-align: left;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+}
+tr:hover td {
+  background: var(--bg);
+}
+
+/* ---------- Status badges ---------- */
+.status {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.status-new {
+  background: rgba(255, 107, 87, 0.15);
+  color: var(--coral-dark);
+}
+.status-contacted {
+  background: rgba(255, 180, 0, 0.18);
+  color: #a87400;
+}
+.status-closed {
+  background: rgba(14, 124, 123, 0.15);
+  color: var(--teal-dark);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+  .topbar,
+  .admin-nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .topbar-right span {
+    display: none;
+  }
+}
+/* =========================================================
+   ADMIN ADDITIONS 2 (properties list, buttons, alerts)
+   Is poore code ko admin.css ke SABSE NEECHE paste karo
+   (pehle wale additions ke baad).
+   ========================================================= */
+
+/* ---------- Page heading + Add button ---------- */
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.page-head .page-title {
+  margin-bottom: 0;
+}
+.page-title small {
+  font-size: 18px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---------- Extra buttons ---------- */
+.btn-teal {
+  background: var(--teal);
+}
+.btn-teal:hover {
+  background: var(--teal-dark);
+}
+.btn-danger {
+  background: #d64545;
+}
+.btn-danger:hover {
+  background: #b83434;
+}
+
+/* ---------- Success message ---------- */
+.alert {
+  margin-bottom: 20px;
+}
+.alert.success {
+  background: rgba(14, 124, 123, 0.13);
+  color: var(--teal-dark);
+}
+
+/* ---------- Table extras ---------- */
+.thumb {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: var(--border);
+}
+.type-tag {
+  background: var(--bg);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+.inline-form {
+  display: inline;
+}
+.actions {
+  white-space: nowrap;
+}
+.actions .btn-small {
+  margin-right: 6px;
+  font-size: 13px;
+  padding: 7px 14px;
+}
+
+/* ---------- Featured star ---------- */
+.star-btn {
+  border: 0;
+  background: transparent;
+  font-size: 26px;
+  line-height: 1;
+  color: #c9d6d6;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+.star-btn:hover {
+  transform: scale(1.25);
+}
+.star-btn.on {
+  color: #ffb400;
+}
+/* =========================================================
+   ADMIN ADDITIONS 3 (property add/edit form)
+   Is poore code ko admin.css ke SABSE NEECHE paste karo
+   (pehle wale additions ke baad).
+   ========================================================= */
+
+.back-link {
+  color: var(--teal);
+  font-weight: 500;
+  font-size: 14px;
+}
+.back-link:hover {
+  color: var(--coral);
+}
+
+/* ---------- Form layout ---------- */
+.admin-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.admin-form .full {
+  grid-column: 1 / -1;
+}
+.admin-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.admin-form .hint {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--text);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.admin-form textarea {
+  resize: vertical;
+}
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(14, 124, 123, 0.18);
+}
+.admin-form input[type="file"] {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Checkbox */
+.checkbox-field {
+  display: flex;
+  align-items: flex-end;
+}
+.admin-form label.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.admin-form label.check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--teal);
+}
+
+/* Purani photo ka preview */
+.current-img {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.current-img img {
+  width: 110px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* Save / Cancel */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 26px;
+}
+.cancel-link {
+  color: var(--muted);
+  font-size: 15px;
+}
+.cancel-link:hover {
+  color: var(--coral);
+}
+
+/* Error list (alert ke andar kai lines) */
+.alert.error div + div {
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .admin-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   ADMIN ADDITIONS 4 (enquiries page)
+   Is poore code ko admin.css ke SABSE NEECHE paste karo
+   (pehle wale additions ke baad).
+   ========================================================= */
+
+/* ---------- Status tabs ---------- */
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.tab-link {
+  padding: 9px 20px;
+  border-radius: 50px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(10, 89, 89, 0.08);
+  transition: background 0.25s, color 0.25s;
+}
+.tab-link:hover {
+  color: var(--teal);
+}
+.tab-link.active {
+  background: var(--teal);
+  color: #fff;
+}
+.tab-count {
+  display: inline-block;
+  min-width: 24px;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 50px;
+  background: var(--bg);
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+.tab-link.active .tab-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* ---------- Table extras ---------- */
+.sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Call / WhatsApp chhote buttons */
+.contact-links {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.mini-btn {
+  padding: 3px 12px;
+  border-radius: 50px;
+  background: var(--bg);
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.25s, color 0.25s;
+}
+.mini-btn:hover {
+  background: var(--teal);
+  color: #fff;
+}
+.mini-btn.wa {
+  background: rgba(37, 211, 102, 0.15);
+  color: #128c4a;
+}
+.mini-btn.wa:hover {
+  background: #25d366;
+  color: #fff;
+}
+
+/* Message: click karne par khulta hai */
+details.msg summary {
+  cursor: pointer;
+  color: var(--teal);
+  font-weight: 500;
+  list-style: none;
+}
+details.msg summary::-webkit-details-marker {
+  display: none;
+}
+details.msg p {
+  margin-top: 8px;
+  max-width: 260px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  white-space: normal;
+}
+
+/* Status dropdown (rang status ke hisaab se) */
+.status-select {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.status-select:focus {
+  outline: 2px solid var(--teal);
+}
+
+/* ---------- Pagination ---------- */
+.pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.pager a {
+  color: var(--teal);
+  font-weight: 600;
+}
+.pager a:hover {
+  color: var(--coral);
+}
+/* =========================================================
+   ADMIN ADDITIONS 5 (Users page ka search box)
+   Is poore code ko admin.css ke SABSE NEECHE paste karo.
+   ========================================================= */
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.search-form input[type="text"] {
+  flex: 1;
+  min-width: 220px;
+  max-width: 420px;
+  padding: 11px 16px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 14px;
+}
+.search-form input[type="text"]:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(14, 124, 123, 0.18);
+}

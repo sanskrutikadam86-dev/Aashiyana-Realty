@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Aashiyana Realty</title>
+    <meta
+      name="description"
+      content="Contact Aashiyana Realty for flats, rentals and commercial properties in Mumbai. Call, WhatsApp or visit our Andheri West office."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+
+        <nav class="menu" id="menu">
+          <a href="index.html">Home</a>
+          <a href="properties.html">Properties</a>
+          <a href="sell.html">Sell</a>
+          <a href="emi.html">EMI Calculator</a>
+          <a href="index.html#areas">Areas</a>
+          <a href="index.html#services">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="icon-btn" id="themeBtn" aria-label="Dark mode">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a href="tel:+918104591780" class="btn btn-coral">Call Now</a>
+          <button class="icon-btn burger" id="burger" aria-label="Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p class="breadcrumb">
+          <a href="index.html">Home</a> &nbsp;/&nbsp; Contact
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= INFO + FORM ================= -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">Get in Touch</span>
+          <h2>Get in Touch</h2>
+          <p>Whether you want to explore a property or have any questions, we’re here to help.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: contact info -->
+          <div>
+            <div class="info-card reveal">
+              <div class="info-icon"><i class="bi bi-telephone"></i></div>
+              <div>
+                <h4>Call Us</h4>
+                <a href="tel:+918104591780">+91 81045 91780</a>
+              </div>
+            </div>
+            <div class="info-card reveal">
+              <div class="info-icon"><i class="bi bi-whatsapp"></i></div>
+              <div>
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/918104591780" target="_blank" rel="noopener">Chat with us</a>
+              </div>
+            </div>
+            <div class="info-card reveal">
+              <div class="info-icon"><i class="bi bi-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:info@aashiyanarealty.in">info@aashiyanarealty.in</a>
+              </div>
+            </div>
+            <div class="info-card reveal">
+              <div class="info-icon"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <h4>Visit Office</h4>
+                <p>Office No. 12, Link Road, Andheri West, Mumbai 400053</p>
+              </div>
+            </div>
+            <div class="info-card reveal">
+              <div class="info-icon"><i class="bi bi-clock"></i></div>
+              <div>
+                <h4>Office Hours</h4>
+                <p>Monday - Saturday<br />10:00 AM - 7:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: enquiry form -->
+          <div class="form-card reveal">
+            <h2>Get in Touch</h2>
+            <p>Fill out the form, and we’ll call you shortly.</p>
+
+            <form id="enquiryForm">
+              <div class="form-grid">
+                <input type="text" id="fName" placeholder="Your Name" required />
+                <input
+                  type="tel"
+                  id="fPhone"
+                  placeholder="Mobile Number"
+                  pattern="[0-9]{10}"
+                  maxlength="10"
+                  title="10 digit mobile number daalein"
+                  required
+                />
+                <input class="full" type="email" id="fEmail" placeholder="Email (optional)" />
+
+                <select id="fType">
+                  <option value="Buy a Flat">I want to: Buy a Flat</option>
+                  <option value="Rent a Flat">I want to: Rent a Flat</option>
+                  <option value="Commercial Space">I want to: Commercial Space</option>
+                  <option value="Sell my Property">I want to: Sell my Property</option>
+                  <option value="Home Loan Help">I want to: Home Loan Help</option>
+                </select>
+                <select id="fBudget">
+                  <option value="Not decided">Budget: Not decided</option>
+                  <option value="Under 50 Lakh">Under &#8377;50 Lakh</option>
+                  <option value="50 Lakh - 1 Crore">&#8377;50 Lakh - &#8377;1 Crore</option>
+                  <option value="1 - 2 Crore">&#8377;1 Crore - &#8377;2 Crore</option>
+                  <option value="2 - 5 Crore">&#8377;2 Crore - &#8377;5 Crore</option>
+                  <option value="Above 5 Crore">Above &#8377;5 Crore</option>
+                </select>
+
+                <input
+                  class="full"
+                  type="text"
+                  id="fArea"
+                  placeholder="Preferred Area (e.g. Andheri, Powai, Thane)"
+                />
+                <textarea
+                  class="full"
+                  id="fMessage"
+                  rows="5"
+                  placeholder="Message (optional)"
+                ></textarea>
+
+                <button type="submit" class="btn btn-coral full">
+                  <i class="bi bi-whatsapp"></i> Send on WhatsApp
+                </button>
+              </div>
+              <p class="form-note">
+                Click the button to open WhatsApp with your details pre-filled. Simply press Send.
+              </p>
+              <div class="form-msg" id="formMsg">
+                <i class="bi bi-check-circle-fill"></i> WhatsApp is open. Don’t forget to tap Send!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAP ================= -->
+    <section style="padding-top: 0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="tag">Find Us</span>
+          <h2>Our Office</h2>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Andheri+West,+Mumbai&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Aashiyana Realty office location"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+            <p style="margin-top: 14px">
+              Your Trusted Property Partner in Mumbai, Thane, and Navi Mumbai.
+            </p>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas</h4>
+            <ul>
+              <li><a href="properties.html?area=Andheri">Andheri</a></li>
+              <li><a href="properties.html?area=Bandra">Bandra</a></li>
+              <li><a href="properties.html?area=Powai">Powai</a></li>
+              <li><a href="properties.html?area=Thane">Thane</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><i class="bi bi-geo-alt"></i> Andheri West, Mumbai 400053</li>
+              <li><i class="bi bi-telephone"></i> +91 81045 91780</li>
+              <li><i class="bi bi-envelope"></i> info@aashiyanarealty.in</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">
+          &copy; <span id="year"></span> Aashiyana Realty. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/918104591780?text=Hi%2C%20I%20am%20interested%20in%20a%20property%20in%20Mumbai"
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

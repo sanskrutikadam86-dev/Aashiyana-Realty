@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties in Mumbai | Aashiyana Realty</title>
+    <meta
+      name="description"
+      content="Browse flats for sale, rent and commercial spaces in Mumbai, Thane and Navi Mumbai. Filter by area, BHK and budget."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+
+        <nav class="menu" id="menu">
+          <a href="index.html">Home</a>
+          <a href="properties.html" class="active">Properties</a>
+          <a href="sell.html">Sell</a>
+          <li><a href="emi.html">EMI Calculator</a></li>
+          <a href="index.html#areas">Areas</a>
+          <a href="index.html#services">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="icon-btn" id="themeBtn" aria-label="Dark mode">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a href="tel:+918104591780" class="btn btn-coral">Call Now</a>
+          <button class="icon-btn burger" id="burger" aria-label="Menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Properties in Mumbai</h1>
+        <p class="breadcrumb">
+          <a href="index.html">Home</a> &nbsp;/&nbsp; Properties
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FILTER BAR ================= -->
+    <section class="filter-wrap">
+      <div class="container">
+        <div class="filter-bar">
+          <select id="fType">
+            <option value="all">All Types</option>
+            <option value="buy">Buy</option>
+            <option value="rent">Rent</option>
+            <option value="commercial">Commercial</option>
+          </select>
+          <select id="fArea">
+            <option value="all">All Areas</option>
+            <option>Andheri</option>
+            <option>Bandra</option>
+            <option>Powai</option>
+            <option>Goregaon</option>
+            <option>Borivali</option>
+            <option>Mulund</option>
+            <option>Worli</option>
+            <option>Lower Parel</option>
+            <option>Thane</option>
+            <option>Navi Mumbai</option>
+          </select>
+          <select id="fBhk">
+            <option value="all">Any BHK</option>
+            <option value="1">1 BHK</option>
+            <option value="2">2 BHK</option>
+            <option value="3">3 BHK</option>
+          </select>
+          <select id="fBudget">
+            <option value="all">Any Budget (Buy)</option>
+            <option value="0-100">Under &#8377;1 Cr</option>
+            <option value="100-200">&#8377;1 - 2 Cr</option>
+            <option value="200-500">&#8377;2 - 5 Cr</option>
+            <option value="500-99999">Above &#8377;5 Cr</option>
+          </select>
+          <button class="btn btn-outline" id="savedBtn">
+            <i class="bi bi-heart"></i> Saved
+            <span class="count" id="savedCount">0</span>
+          </button>
+          <button class="btn btn-coral" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LISTINGS ================= -->
+    <section class="listing">
+      <div class="container">
+        <p class="result-bar">
+          Showing <strong id="resultCount">12</strong> properties
+        </p>
+
+        <!-- Properties ab database se aati hain (api/properties.php) -->
+        <div class="props-grid" id="propGrid">
+          <!-- Cards yahan JavaScript database se banayegi -->
+        </div>
+
+        <!-- Jab koi property match na kare -->
+        <div id="noResults">
+          <i class="bi bi-house-x"></i>
+          <h3>No properties found for this filter.</h3>
+          <p>Try changing the filters, or contact us on WhatsApp. We'll help you find the right property..</p>
+          <a href="contact.html" class="btn btn-coral">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <a href="index.html" class="logo">Aashiyana<span>.</span></a>
+            <p style="margin-top: 14px">
+              Your trusted property partner in Mumbai, Thane, and Navi Mumbai.
+            </p>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="sell.html">Sell Your Property</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Areas</h4>
+            <ul>
+              <li><a href="properties.html?area=Andheri">Andheri</a></li>
+              <li><a href="properties.html?area=Bandra">Bandra</a></li>
+              <li><a href="properties.html?area=Powai">Powai</a></li>
+              <li><a href="properties.html?area=Thane">Thane</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><i class="bi bi-geo-alt"></i> Andheri West, Mumbai 400053</li>
+              <li><i class="bi bi-telephone"></i> +91 81045 91780</li>
+              <li><i class="bi bi-envelope"></i> info@aashiyanarealty.in</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">
+          &copy; <span id="year"></span> Aashiyana Realty. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/918104591780?text=Hi%2C%20I%20am%20interested%20in%20a%20property%20in%20Mumbai"
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/properties.js"></script>
+  </body>
+</html>
